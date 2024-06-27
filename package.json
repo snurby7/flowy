@@ -1,5 +1,5 @@
 {
-  "name": "flowy",
+  "name": "bite-club",
   "private": true,
   "scripts": {
     "build": "turbo build",

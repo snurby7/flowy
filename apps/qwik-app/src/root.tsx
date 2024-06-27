@@ -1,12 +1,14 @@
-import { component$ } from "@builder.io/qwik";
+import { FlowbiteProvider, FlowbiteProviderHeader } from 'flowbite-qwik';
+
+import { component$ } from '@builder.io/qwik';
 import {
   QwikCityProvider,
   RouterOutlet,
   ServiceWorkerRegister,
-} from "@builder.io/qwik-city";
-import { RouterHead } from "./components/router-head/router-head";
+} from '@builder.io/qwik-city';
+import { RouterHead } from './components/router-head/router-head';
 
-import "./global.css";
+import './global.css';
 
 export default component$(() => {
   /**
@@ -21,11 +23,14 @@ export default component$(() => {
       <head>
         <meta charset="utf-8" />
         <link rel="manifest" href="/manifest.json" />
+        <FlowbiteProviderHeader />
         <RouterHead />
         <ServiceWorkerRegister />
       </head>
       <body lang="en">
-        <RouterOutlet />
+        <FlowbiteProvider theme="purple" toastPosition="top-right">
+          <RouterOutlet />
+        </FlowbiteProvider>
       </body>
     </QwikCityProvider>
   );
