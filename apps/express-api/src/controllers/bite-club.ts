@@ -1,5 +1,5 @@
-const express = require("express");
-const biteService = require("../services/bite-service");
+import express from "express";
+import { biteService } from "../services/bite-service";
 
 const router = express.Router();
 
@@ -14,4 +14,4 @@ router.post("/", (req, res) => {
   biteService.addBite(req.body);
 });
 
-module.exports = router;
+export default router;
