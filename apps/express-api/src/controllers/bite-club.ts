@@ -1,5 +1,5 @@
 import express from "express";
-import { biteService } from "../services/bite-service";
+import { biteService } from "../services/bites/bite-service";
 
 const router = express.Router();
 
