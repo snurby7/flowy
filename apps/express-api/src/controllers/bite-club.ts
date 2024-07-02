@@ -10,8 +10,9 @@ router.get("/", (req, res) => {
   const bites = biteService.getBites();
   return res.json(bites);
 });
-router.post("/", (req, res) => {
-  biteService.addBite(req.body);
+router.post("/", async (req, res) => {
+  const createdBite = await biteService.addBite(req.body);
+  return res.json(createdBite);
 });
 
 export default router;

@@ -13,7 +13,7 @@ export const biteService = {
     }
     return bites;
   },
-  addBite: (biteObj: ICreateBiteRequest) => {
+  addBite: async (biteObj: ICreateBiteRequest) => {
     throw new Error("Not done yet - please hold on");
   },
 };
