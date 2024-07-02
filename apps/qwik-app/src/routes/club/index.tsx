@@ -1,6 +1,7 @@
 import { component$, Resource, useResource$ } from "@builder.io/qwik";
 import { Alert, Jumbotron } from "flowbite-qwik";
 import { getBites } from "~/api/BiteClubApi";
+import { CreateBiteForm } from "~/components/forms/CreateBiteForm";
 import { Page } from "~/components/page/Page";
 
 export default component$(() => {
@@ -22,6 +23,7 @@ export default component$(() => {
           onResolved={(bites) => bites.map((bite) => <div>{bite.id}</div>)}
         />
       </div>
+      <CreateBiteForm />
     </Page>
   );
 });

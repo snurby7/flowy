@@ -10,9 +10,9 @@ router.get("/", (req, res) => {
   const bites = biteService.getBites();
   return res.json(bites);
 });
-router.post("/", async (req, res) => {
+router.post("/", async (req, res, next) => {
   const createdBite = await biteService.addBite(req.body);
-  return res.json(createdBite);
+  next(Error("Not done yet - please hold on"));
 });
 
 export default router;
