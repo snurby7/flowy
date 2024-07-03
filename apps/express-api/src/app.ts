@@ -2,7 +2,7 @@ import cors from "cors";
 import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
-import biteClubApi from "./controllers/bite-club";
+import biteClubApi from "./bites/bite-club";
 import { middleware } from "./middleware";
 
 require("dotenv").config();
